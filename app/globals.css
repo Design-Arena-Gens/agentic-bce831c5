@@ -1,0 +1,43 @@
+/* CSS Reset (simplified) */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: radial-gradient(1200px 800px at 100% 0%, #0ea5e9 0%, #111827 40%, #0b1220 100%); color: #e5e7eb; }
+
+:root {
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-border: rgba(255, 255, 255, 0.12);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22d3ee;
+}
+
+.container {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.card {
+  width: min(680px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  padding: 2.25rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  margin: 0 0 0.75rem 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  color: white;
+}
+
+p { margin: 0.5rem 0; color: var(--text); font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: 0.95rem; }
+
+@media (max-width: 480px) {
+  .card { padding: 1.5rem; border-radius: 14px; }
+}
